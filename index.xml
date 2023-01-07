@@ -1,0 +1,679 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--********************************************************************
+Copyright 2022 Trefor Bazett
+                                     -->
+
+<pretext>
+
+    <docinfo>
+        <macros>
+        \newcommand{\doubler}[1]{2#1}
+        </macros>
+        <rename element="algorithm">Post-Video Exercises</rename>
+        <rename element="exercises">Post-Video Activities</rename>
+    </docinfo>
+
+    <book xml:id="VectorCalculus">
+        <title>Introduction to Vector Calculus</title>
+
+        <frontmatter>
+        <title>Preface</title>
+            <titlepage>
+                <author>
+                    <personname>Trefor Bazett</personname>
+                    <institution>University of Victoria</institution>
+                </author>
+                <date><today /></date>
+            </titlepage>
+
+           
+            
+            
+
+             <abstract>
+            <title>About This Video Text</title>
+                <p>This video text consists of an introduction to Vector Calculus, and is the first ~1/3 of the course Math 204 at the University of Victoria. The remaining ~2/3 of that course is on Ordinary Differential Equations and the videos for that section are in this <url href="http://web.uvic.ca/~tbazett/diffyqs/frontmatter-1.html" visual="web.uvic.ca/~tbazett/diffyqs">ODE textbook adapted for Math 204</url>. </p>
+                <p>I call it a "video book" because it primarily consists of a series of videos. These videos comprised the bulk of an asynchronous online course taught in Spring 2021. Surrounding the videos are Learning Objectives, text summaries, pre- and post-video exercises, and other resources. That is, this video text goes beyond just the playlist on YouTube by providing these additional supports that help scaffold the videos themselves. This is particularly important given my general view that learning mathematics is something best done when you are actively DOING mathematics, and not just passively watching videos. </p>
+            <p>If you prefer just the videos, the playlist of all videos from both this book and the ODE book in order is below </p>
+   <video youtubeplaylist="PLQ9f-JfDG2WyBPsKFkkfszurhIYeKN6oX"></video>
+            <p><em>Notes about YouTube: </em> Videos in this playlist are not monetized and contain no calls-to-action (ex: "Like and Subscribe"). However, YouTube will unfortunately nevertheless play ads on unmonetized videos occasionally. I additionally and separately have a large public YouTube channel that contains most of the same videos, but those videos often will have calls-to-action in them. It is thus recomended that any UVic student use the version of the videos linked in this video textbook.   </p>
+            
+            </abstract>
+
+             <colophon>
+            <title>Overview of Vector Calculus</title>
+             
+            
+
+<p>In this video I do an overview of the major ideas from Vector Calculus. The goal is to give a bit of perspective of where we are going and gain some broad familiarity with the subject before we actually start doing everything slowly in the subsequent videos.</p>
+
+    <video youtube="oO7RH66rS4o"></video>
+
+<p><alert>Post Video Exericses: </alert> After most videos in this text, I will give prompts for "Post-Video Activities" that might be practice problems or other activities to help solidfy your understanding. As this first video is an overview, I will simply ask:</p>
+<ol marker="1">
+<li><p>What did you notice? </p></li>
+<li><p>What did you wonder? </p></li>
+</ol>
+
+            </colophon>
+
+        
+        </frontmatter>
+
+
+    <chapter xml:id="chapter-Line-Integrals">
+    <title>Line Integrals</title>
+       <introduction>
+<p>This section is all about our first new object of study, called a line integral</p></introduction>
+
+<section xml:id="section-Review-Curves">
+<title>Review of Curves and Parameterizations</title>
+<p>This video is a review of several concepts we've seen in multivariable calculus, so read the list below and if you're 100% confident you can skip it. We're going to use curves, parameterizations, and the arclength parameter all over the place in Vector Calculus , so we need to make sure we're very confident with them. Specifically we'll review:</p>
+<ol marker="1">
+<li><p>Curves vs Paths</p></li>
+<li><p>Different Parameterizations</p></li>
+<li><p>Tangent Vectors and notation</p></li>
+<li><p>Arclength and  arclength parameter formulas</p></li>
+<li><p>Derivatives w.r.t arclength parameter</p></li></ol>
+
+<video youtube="VpBvU77IuZA"></video>
+<exercises>
+<exercise><p>What is difference between a curve and a parameterized path?</p></exercise>
+<exercise><p>When would you use the arclength parameter <m>s</m> and when the time parameter <m>t</m>?</p></exercise>
+</exercises>
+</section>
+
+
+
+
+<section xml:id="section-Line-Integrals">
+<title>Introduction to Line Integrals </title>
+<p>Our first new object of study is called a line integral. In 1st year calculus, we study the integral of function over some interval <m>[a,b]</m> such as <m>f(x)=x^2</m> on <m>[0,1]</m>. The integral gave the area under the curve above that interval. But now imagine you have a height <m>f(x,y)</m> over top of not just a simple interval, but some curve in the 2D plane. Can we still make sense of a type of area under the function above that curve? This will be the notion of the Line Integral. </p>
+
+<p>Pre-requisites: The derivation in this video is fairly analogous to the derivation for arclength from multivariable calculus (Math 200 at UVic).  <url href="https://www.youtube.com/watch?v=e6dkE6T391c">You can check out that video here.</url></p>
+
+<p>Learning Objectives:</p>
+<ol marker="1">
+<li><p>Define Line Integrals</p></li>
+<li><p>Interpret Line Integrals Geometrically</p></li></ol>
+
+<video youtube="-aP3tiu9FBs"></video>
+<exercises>
+<exercise><p>How would you explain the Big Idea of a line integral to someone who has only taken single-variable calculus (If you know someone like that, try it out with them!) </p></exercise>
+<exercise><p>We had two expressions for the line integral, one in terms of <m>ds</m> and one in terms of <m>dt</m>. Why? What was the difference? When might we use one or the other?</p></exercise>
+</exercises>
+</section>
+
+
+<section>
+<title>Example Computing a Line Integral     </title>
+<p>While the previous video introduced the geometric idea of a line integral and derived a formula for it, we didn't actually do a computational example. Here we will find a parameterization for a given curve and plug everything into the formula</p>
+
+<p>Learning Objectives:</p>
+<ol marker="1">
+<li><p>Find parameterizations for curves</p></li>
+<li><p>Evaluate Line Integrals for a given parameterization</p></li></ol>
+
+<video youtube="aVDs9UkHSuc"></video>
+
+
+<exercises>
+<p>In the above video our curve was represented by one parameterization. However, sometimes a curve is easier to break into different segments and write out a parameterization for each segment. For instance, consider the curve that goes from the origin to (1,0) in a straight line and then up to (1,2) in a straight line. We have a property called Additivity where if a curve <m>C_1</m> ends at the start of a curve <m>C_2</m>  then </p><md><mrow>\int_{C_1\cup C_2}f(x,y)ds=\int_{C_1}f(x,y)ds+\int_{C_2}f(x,y)ds</mrow></md>
+
+<exercise><p>Write out a parameterization for each of the two line segments mentioned above. </p></exercise>
+<exercise><p>Compute <m>\int_{C_1\cup C_2}(xy+x^2)ds</m></p></exercise>
+</exercises>
+</section>
+
+<section>
+<title>Line Integrals in 3D    </title>
+<p>Previously we looked at 2D curves, and then a function <m>f(x,y)</m> above that curve. However, the curve could be 3D (or more). We lose the nice geometric interpretation that we can plot in 3 dimensions (The graph of a function <m>f(x,y,z)</m> over a 3D curve is four dimensional). But there are lots of important physical interpretations of line integrals over 3D curves nevertheless. </p>
+<p>Learning Objectives:</p>
+<ol marker="1">
+<li><p>Interpret line integrals in 3D physically (Ex: mass of wires, volumes of pipes, and arclength)</p></li></ol>
+
+<video youtube="4lS-Oqp0f30"></video>
+<exercises><exercise>
+<p>Can you think of any other physical quantities that could be expressed as a line integral over either 2D or 3D curves beyond those I've introduce already? </p>
+</exercise></exercises>
+</section>
+
+
+</chapter>
+<chapter xml:id="chapter-Vector-Fields">
+<title>Vector Fields</title>
+<introduction>
+<p>In this chapter we are going to learn about vector fields and how to relate line integrals with vector fields.</p></introduction>
+
+<section>
+<title>Intro to Vector Fields</title>
+<p>All around us in natures are something called <alert>Vector Fields</alert>, and these are the fundamental objects we will study in Vector Calculus. As an example at any point in space, there is  little arrow that describes how an object would move under the force of gravity. In the future, we will then take a path (think line integrals!!) through some vector field. </p>
+
+<p>Learning Objectives:</p>
+<ol marker="1">
+<li><p>Use the terminology and notation of Vector Fields</p></li>
+<li><p>Sketch a Vector Field by hand</p></li>
+<li><p>Sketch a Vector Field with technology.</p></li></ol>
+
+<video youtube="PNEj9Jun2os"></video>
+<exercises>
+<exercise><p>Can you think of a couple examples of vector fields in the world beyond what I gave?</p></exercise>
+<exercise><p>You can plot vector fields with these GeoGebra applets. You can bookmark these URLS if you like, and for now I challenge you to find the coolest plot you can at the following links: <url href="https://www.geogebra.org/m/QPE4PaDZ">2D plotter</url> and <url href="https://www.geogebra.org/m/u3xregNWl">3D plotter</url></p></exercise>
+</exercises>
+</section>
+
+<section>
+<title>Gradient Vector Field</title>
+<p>One important example of a vector field is that generated by the gradient of a scalar function, i.e. <m>\nabla f</m> . We studied this object a lot back in multivariable calculus and it has many nice properties such as point in the direction of maximal increase of the function <m>f</m>. </p>
+<p>Learning Objectives:</p>
+<ol marker="1">
+<li><p>Describe the gradient vector field</p></li></ol>
+
+<video youtube="nDFMpf4UmkA"></video>
+
+<exercises>
+<exercise>><p>Recall back to multivariable calculus. How was the gradient vector connected to the notion of directional derivatives?</p></exercise>
+</exercises>
+
+</section>
+
+<section>
+<title>Line Integral of a Gradient Vector Field</title>
+<p>We've so far seen line integrals and vector fields. Now we put them together and investigate the line integral of a vector field along a curve. In physics and engineering, when the fields are force fields like gravity, this will capture the concept of Work. </p>
+<p>Learning Objectives:</p>
+<ol marker="1">
+<li><p>Geometrically describe the line integral of a vector field</p></li>
+<li><p>Connect the physics concept of work to a line integral</p></li>
+<li><p>State a definition for the line integral of a vector field</p></li>
+<li><p>State a formula to compute the line integral of a vector field given a parameterization of the curve</p></li></ol>
+
+<video youtube="f0aKja00lWM"></video>
+<exercises>
+<exercise><p>One application of line integrals of vector fields I mentioned already: work. This is when the field represents a force. What if the field represented a velocity field, like a swirling body of water with each vector showing the velocity of water at that point. What type of thing would the same line integral formula represent physically in that case? Note: you might not have a nice name for it like we did for work just yet, we'll give a name later:)</p></exercise>>
+<exercise><p><url href="https://paveldogreat.github.io/WebGL-Fluid-Simulation/">I LOVE this animation of fluid flows</url> Note that while in this course we primarily focus on static fields (i.e they don't change in time) this animation let's you see what happens with dynamic fields that get perturbed by your mouse input. </p>
+</exercise>
+</exercises>
+
+</section>
+
+<section>
+<title>Example: Line Integral of a Vector Field</title>
+<p>This video gives a concrete example of a line integral along a vector field by choosing a specific parameterization of the curve and computing it all.  </p>
+ <p>Learning Objectives:</p>
+<ol marker="1">
+<li><p>Compute the line integral of a vector field</p></li></ol>
+
+<video youtube="kzK6fvo744A"></video>
+
+
+
+<exercises>
+<exercise>
+<p>Let's practice a second example: Find the work done by the field <m>\vec{F}=x\hat{i}+y\hat{j}+z\hat{k}</m> along the curve parametrized by <m>\vec{r}(t)=\cos(\pi t)\hat{i}+t^2\hat{j}+\sin(\pi t)\hat{k},\ 0\leq t\leq 1</m>. </p>
+<answer><p><m>1/2</m></p></answer>
+</exercise>
+</exercises>
+</section>
+
+<section>
+<title>Line Integrals with respect to x or y</title>
+<p>In this video we are going to focus on line integrals with respect to just one of the variables, x or y. When our line integral is geometrically interpreted as the surface area above some planar curve beneath some function, then the line integral with respect to x or y can be interpreted as the projection of that surface onto either the xz or yz plane. Alternatively, if we are doing a Line Integral of a vector field along a curve, the line integrals with respect to dx or dy is just zeroing out the <m>\hat{j}</m> or <m>\hat{i}</m> components respectively. </p>
+<p>Learning Objectives:</p>
+<ol >
+<li><p>Compute a line integral with respect to x or y</p></li>
+<li><p>Interpret line integrals with respect to x or y geometrically</p></li></ol>
+<p><alert>TYPO</alert>: <em>At 7:45 I accidentally drop the derivative primes from g' and h' despite them being present in the previous slide.</em></p>
+<video youtube="Rook3NkTJzA"></video>
+
+<exercises>
+<exercise>
+<p>Compute <m>\int_C zdy</m> where the curve is the helix parametrized by <m>\vec{r}(t)+\cos(t)\hat{i}+\sin(t)\hat{j}+t\hat{k},\ 0\leq t\leq 2\pi</m> </p>
+<answer><p>The integral will have a short integration by parts in it and evaluates to 0</p></answer>
+</exercise>
+</exercises>
+</section>
+
+
+
+<section>
+<title>Circulation and Flow</title>
+<p>When a vector field is a velocity field, a natural phenomenon we can measure is the Flow. This accumulates the tendency of the vector field to be tangential to the curve. If we imagine our field is a velocity field, the flow is measuring the degree to which a curve just naturally flows along with that velocity field. As a line integral, this is identical to our formula for work, it is just interpreted differently physically. When the path is a closed curve - i.e. starts and ends at the same point - then the flow integral is called the circulation of the vector field along a path.</p>
+<p>Learning Objectives:</p>
+<ol marker="1">
+<li><p>State the definition for the Flow or Circulation </p></li>
+<li><p>Geometrically interpret Flow or Circulation. </p></li>
+<li><p>Compute Flow or Circulation for a specific parametrization</p></li></ol>
+<video youtube="AgJN9JiYTjk"></video>
+
+<exercises>
+<exercise>
+<p>One sort of annoying thing about this section is there are a LOT of different looking formulas to compute the exact same thing. Five, to be precise as listed <url href="https://media.pearsoncmg.com/cmg/pmmg_mml_shared/mathstats_html_ebooks/ThomasCalcET14e/page_982.html">in Thomas' Calculus</url>. It's partly because we have a definition in terms of ds, but we compute it with a parametrization, and then sometimes easier to remember using the the line integrals with respect to x or y or z. Anyways, just take note of the differences and why you might prefer one or the other.  </p></exercise>
+<exercise><p>Imagine you compute the circulation along some curve from point A to point B. Now imagine it is the same curve, but oriented exactly backwards, starting at point B and going to point A. How does this affect the circulation? Can you both guess the answer AND prove it using the formulas?</p></exercise>
+</exercises>
+</section>
+
+<section xml:id="section-Flux">
+<title>Flux</title>
+<p>Another quantity we can measure as we travel around a (closed) curve is called Flux. It measures the degree to which the vector field is aligned with the normal pointing out of the curve. </p>
+<p>Learning Objectives:</p>
+<ol marker="1">
+<li><p>Geometrically describe a Flux Integral </p></li>
+<li><p>Define the Flux Integral</p></li>
+<li><p>Compute a Flux Integral given a parametrization</p></li></ol>
+
+<p><alert>TYPOS:</alert><em>:At 10:24 in the above I put up for a few seconds the computation of flux for the spin field without walking through it as an exercise. Two notes. Firstly, I do yi-xj where in the graphics at the beginning of the video I had -yi+xj. Secondly, there is a missing negative sign in the second integral which is needed to get to my final answer which is (correctly) zero. </em></p>
+<video youtube="sh_DS2pujSo"></video>
+
+<exercises>
+<exercise>
+<p>Consider the field (called a shear field) given by <m>\vec{F}=-y\hat{i}</m>. First try to visualize with pen and paper and you can verify using the <url href="https://www.geogebra.org/m/QPE4PaDZ">2D vector field plotter we saw previously</url>. Consider the counterclockwise unit circle centered at the origin. Would it have positive, zero, or negative circulation? Now imagine the circle is shifted to it is centred at (0,1). Again, would it have positive, zero, or negative circulation. You can just try to visualize what would happen, and if you wish verify by parametrizing and computing.</p></exercise>
+<exercise><p>Same question as above, but for Flux now</p></exercise>
+</exercises>
+</section>
+
+</chapter>
+
+
+<chapter xml:id="chapter-Conservative-Fields">
+<title>Conservative Vector Fields</title>
+<introduction><p>Many vector fields - such as the gravitational field - have a remarkable property called being a conservative vector field which means that line integrals over that field are path independent. That is, if you want to compute a line integral (physically interpreted as work) the ONLY thing that matters is the endpoints, not what happens along the field. Cool! We are going to have a very powerful theorem called the Fundamental Theorem of Line Integrals that will apply to conservative vector fields. </p>
+</introduction>
+<section xml:id="section-Conservative-Fields_Intro">
+<title>Intro to Conservative Vector Fields</title>
+<p>In this video we define the basic idea of a conservative vector field, and compute out an example modelling gravity that shows this is a conservative vector field.</p>
+<p>Learning Objectives:</p>
+<ol marker="1">
+<li><p>Define a conservative vector field</p></li>
+<li><p>Demonstrate a field is conservative by computing line integrals along a generic path (note: this method is only possible in specially chosen cases - a more general approach will come later)</p></li></ol>
+
+<video youtube="u9Q2GsSLAEU"></video>
+
+<exercises>
+<p>Demonstrate that the spin field <m>\vec{F}=-y\hat{i}+x\hat{j}</m> is <em> not</em> conservative. We will do this by taking two curves from the point (1,0) to (-1,0). The first <m>C_1</m> is the straight line. The second <m>C_2</m>goes counterclockwise along the top half of the unit circle. </p>
+<exercise> <p>Compute <m>\int_{C_1}\vec{F}\cdot d\vec{r}</m></p>
+<answer><p>0</p></answer></exercise>
+<exercise><p>Compute <m>\int_{C_2}\vec{F}\cdot d\vec{r}</m></p>
+<answer><p><m>\pi</m></p></answer></exercise>
+<exercise><p>Why does the above two computations demonstrate the field is not conservative?</p></exercise>
+<exercise><p>Suppose you computed the same result along two different curves. Would that be enough to deduce it was conservative?</p></exercise>
+</exercises>
+</section>
+
+<section xml:id="section-Fundamental-Theorem">
+<title>Fundamental Theorem of Line Integrals</title>
+<p>Back in 1st year calculus we have seen the Fundamental Theorem of Calculus II, which loosely said that integrating the derivative of a function just gave the difference of the function at the endpoints. That is, what happened in the middle did not matter. In this video we upgrade to the Fundamental Theorem of Line Integrals, which is a generalization of the Fundamental Theorem of Calculus. It says that when you take the line integral of a conservative vector field (ie one where the field can be written as the gradient of a scalar potential function), then this line integral is similarly just the difference of the function at the endpoints and is thus path independent - only the endpoints matter. </p>
+<p>Learning Objectives:</p>
+<ol marker="1">
+<li><p>State the Fundamental Theorem of Line Integrals</p></li>
+<li><p>Prove the Fundamental Theorem of Line Integral</p></li></ol>
+
+<video youtube="cIaMc8fN5nM"></video>
+
+<exercises>
+<exercise><p>What is similar between this theorem and the Fundamental Theorem of Calculus II from back in 1st year calculus? What is different?</p></exercise>
+</exercises>
+</section>
+
+<section xml:id="section-Test-Conservative">
+<title>How to Test if a Vector Field is Conservative</title>
+<p>A vector field is conservative if the line integral is independent of the choice of path between two fixed endpoints. We have previously seen this is equivalent of the Field being able to be written as the gradient of a scalar potential function. In this video we will derive a simple test to see whether a field is indeed conservative. We discover three equations that relate different partial derivatives of the components of the field, and if those equations are equal, then the field is conservative.</p>
+<p>Learning Objectives:</p>
+<ol marker="1">
+<li><p>Given a vector field, test to see if it is conservative</p></li></ol>
+
+<video youtube="P0OrNBucmnM"></video>
+
+<exercises>
+<exercise><p>The 3 equations adding up to 6 different partial derivatives might seem like a lot to memorize, but there is a nice pattern. Take a second look at the pattern and see if you can write down the three equations without looking. </p></exercise>
+</exercises>
+</section>
+
+<section xml:id="section-scalar-potential">
+<title>Finding the scalar potential function for a conservative vector field</title>
+<p>The fundamental theorem of line integrals told us that if we knew a vector field was conservative, and thus able to be written as the gradient of a scalar potential function, we could evaluate any line integral almost trivially by just evaluating that potential function at the endpoints. But how do we FIND the scalar potential function? This video introduces that method. </p>
+<p>Learning Objectives:</p>
+<ol marker="1">
+<li><p>Test to see if a vector field is conservative </p></li>
+<li><p>Given a conservative vector field, find the scalar potential function </p></li>
+<li><p>Compute line integrals using the fundamental theorem of line integrals and the computed scalar potential function </p></li></ol>
+
+<video youtube="WAug8-JNNxA"></video>
+
+
+</section>
+</chapter>
+
+ <chapter xml:id="chapter-Greens-Theorem">
+    <title>Green's Theorem</title>
+       <introduction>
+<p>Vector Calculus has a series of extremely powerful and truly quite amazing theorem's: Green's Theorem, Stokes' Theorem, and the Divergence Theorem, which are all about how properties along the boundary relate to properties across an entire domain. Today we see Green's Theorem, which has two parts, and is the 2D story while the other theorems tell the 3D story. First we'll define two so called "local properties" called circulation density and divergence, before showing how these local properties relate to the global properties we've studied before like flux and flow along an entire boundary. </p></introduction>
+
+<section xml:id="section-Circulation-Density">
+<title>Circulation Density and Curl</title>
+<p>We've preciously studied Circulation (i.e. the Flow around a closed loop). That is a global property, i.e. something that takes place over a big region. Now we are going to study Circulation Density. This measures the degree to which there is spinning locally at a point. We'll derive a formula for this by computing a sort of limit of circulations around smaller and smaller loops until we can say something about what happens at a point.  Note that this is also known as kth component of curl, which is mainly going to be relevant later when we see the full curl. </p>
+<p>Learning Objectives:</p><ol marker="1">
+<li><p>Define Circulation Density</p></li>
+<li><p>Geometrically interpret Circulation Density.</p></li></ol>
+
+<video youtube="1CRi_0aF9lg"></video>
+<exercises>
+<p>Consider two types of rotation:</p>
+<p>Uniform Rotation: <m>\vec{F}=-y\hat{i}+x\hat{j}</m></p>
+<p>Whirlpool  rotation: <m>\vec{F}=\frac{-y}{x^2+y^2}\hat{i}+\frac{x}{x^2+y^2}\hat{j}</m></p>  
+<exercise><p>First try visualizing the two fields. What's the difference? (you might like to use <url href="https://www.geogebra.org/m/QPE4PaDZ">the vector field plotter we've seen before</url> )</p></exercise>
+<exercise><p>Fortuitously, both fields have the same circulation density at all points (the Whirlpool one isn't defined at the origin). For each field, is that constant circulation density positive, zero, or negative ? Try visualizing each  and guess the result, and then compute it out from the formula to check your intuition. </p></exercise>
+</exercises>
+</section>
+
+<section xml:id="section-Greens_Circulation">
+<title>Green's Theorem (Circulation Form)</title>
+<p>Green's Theorem relates the Circulation around a closed path (a global property) to the Circulation Density (a local property) that we talked about in the previous video.  Effectively Green's Theorem says that if you add up all the circulation densities you get the total circulation, which sounds "obvious" based on my word choice, but is truly quite remarkable that these local and global properties which seem completely different can relate so nicely. Green's Theorem has two parts and we will see it in its Divergence form in the third video.  </p>
+<p>Learning Objectives:</p><ol marker="1">
+<li><p>State Green's Theorem in its Circulation Form</p></li>
+<li><p>Geometricaly Interpret Green's Theorem in its Circulation Form</p></li></ol>
+
+<video youtube="1eSfO6sVQns"></video>
+<exercises>
+<exercise><p>What is similar between this theorem and the Fundamental Theorem of Calculus II from back in single variable calculus? What is different?</p></exercise></exercises>
+</section>
+
+<section xml:id="section-Greens-Divergence">
+<title>Divergence and Green's Theorem (Divergence Form)</title>
+<p>Just as circulation density was like zooming in locally on circulation, we're now going to learn about divergence which is the corresponding local property of flux. It measures the degree to which the field is spreading out at any given point. We will then have the second half of Green's Theorem, in its so called Divergence Form,  which relates the local property of divergence over an entire region to the global property of flux across the boundary. </p>
+<p>Learning Objectives:</p><ol marker="1">
+<li><p>State Green's Theorem in its Divergence Form</p></li>
+<li><p>Geometricaly Interpret Green's Theorem in its Divergence Form</p></li></ol>
+
+<video youtube="Wa-nUtiwR7Y"></video>
+<exercises>
+<p>We've <xref ref="section-Circulation-Density">previously studied</xref> these two types of rotation:</p>
+<p>Uniform Rotation: <m>\vec{F}=-y\hat{i}+x\hat{j}</m></p>
+<p>Whirlpool  rotation: <m>\vec{F}=\frac{-y}{x^2+y^2}\hat{i}+\frac{x}{x^2+y^2}\hat{j}</m></p>  
+
+<exercise><p>This time, for each field, is that divergence positive, zero, or negative ? Try visualizing each  and guess the result, and then compute it out from the formula to check your intuition. </p></exercise>
+<exercise><p>At around the 3:00 mark I very quickly skim the derivation that compute the divergence at a point as it was analogous to the derivation for circulation density, based on computing for an infinitesimal rectangle in a a limit. Carefully repeat that computation in full for divergence.  </p></exercise>
+</exercises>
+</section>
+
+<section xml:id="section-Greens-Example">
+<title>Example using Green's Theorem</title>
+<p>Let's actually compute this out. We'll verify both parts of Green's Theorem by computing both sides of the equation for each part.  </p>
+<p>Learning Objectives:</p>
+<ol marker="1">
+<li><p>Compute Circulation and Flux via Green's Theorem</p></li></ol>
+
+<p><alert>TYPO: </alert><em>Circulation density is <m>\frac{\partial N}{\partial x}-\frac{\partial M}{\partial y}</m>. At 2:30 I compute partial of M w.r.t x instead. So the integrand for the double integral should ONLY be y. </em></p>
+<video youtube="jqxOfaGzbP8"></video>
+<exercises>
+<p>Consider the triangular curve going counterclockwise from (0,0) to (1,0) to (0,1) and back to (0,0). Let <m>\vec{F}=2y\hat{i}+x\hat{j}</m>. Use Green's Theorem to compute the counterclockwise circulation two ways:</p>  
+
+<exercise><p>As the circulation density is a constant, you can use the fact that you already know the area of this triangular region to compute the double integral quickly !</p></exercise>
+<exercise><p>To verify, you can use our multivariable calculus methods for double integrals to compute it out </p>
+<answer><p>-1/2</p></answer></exercise>
+</exercises>
+</section>
+
+</chapter>
+
+
+<chapter xml:id="chapter-Surfaces">
+    <title>Surfaces</title>
+       <introduction>
+<p>We've seen previously how to describe curves: parametrically, implicitly and explicitly. Now we are going to describe surfaces, and similarly will do so parametrically, implicitly and explicitly. Our first major application is surface area, which is analogous to arclength of a curve from previously. Then in the next section - as you might guess - we will then have surface integrals analogous to line integrals, and then big theorems about vector fields and surfaces just as we had Green's theorem which was about vector fields and curves. </p></introduction>
+
+<section xml:id="section-Surfaces">
+<title>Describing Surfaces Explicitly, Implicitly and Parametrically</title>
+<p>Let's begin by just seeing the three ways to describe a surface: explicitly, implicitly, and parametrically. Some surfaces like the cone we will see in this video can be reasonably described in multiple ways. In others, the surface is more naturally described using use one of the methods, and specifically when parameterizing a surface we are often trying to look for natural symmetries to exploit in our description.  </p>
+<p>Learning Objectives:</p><ol marker="1">
+<li><p>Describe a surface implicitly, explicitly, and parametrically</p></li>
+<li><p>Convert between a graphical representation of a surface and an algebraic one</p></li></ol>
+
+<video youtube="B43QX6sZkN8"></video>
+<exercises> 
+<exercise><p><url href="https://www.geogebra.org/m/BjV7cNwb">Here is a nice parametric surface plotter</url>.Play around with it for a few different parametric plots, and try to build some intuition for how changes to the description change the surface</p></exercise>
+</exercises>
+</section>
+
+<section xml:id="section-Surfaces-Area-Parametric">
+<title>Surface Area Formula for Parametric Surfaces</title>
+<p>Give a parametrically defined surface, what is its surface area? In this video I walk through the derivation of the surface area formula. In many ways it is completely analogous to what we have previously done with arclength, except in the higher dimensional case we exploit the cross product for being able to find the area of our little patches. </p>
+<p>Learning Objectives:</p><ol marker="1">
+<li><p>State the Surface Area formula for parametric surfaces</p></li>
+<li><p>Explain geometrically what the cross product in the formula represents</p></li></ol>
+
+<video youtube="ObEoK83KR5I"></video>
+<exercises> 
+<exercise><p>Review: Draw yourself a picture demonstrating what the expression <m>\|\vec{r}_u\times\vec{r}_v\|</m> represents.</p></exercise>
+</exercises>
+</section>
+
+<section xml:id="section-Surfaces-Sphere">
+<title>Surface Area of a Sphere</title>
+<p>In this video we apply what we have learned previously about surface area for a parametrically defined surface to the specific example of a sphere</p>
+<p>Learning Objectives:</p><ol marker="1">
+<li><p>Compute the surface area of a sphere using parametric formulas</p></li></ol>
+<p><alert>TYPO: </alert> <em>The change to spherical coordinates is <m>x=a\sin(\phi)\cos(\theta),\ y=a\sin(\phi)\sin(\theta),\ z=a\cos(\phi)</m>. I had this correct in my diagram but then briefly summarized the three and interchanged x and y. </em></p>
+<video youtube="LD7VyVhnTwc"></video>
+<exercises> 
+<exercise><p>How would you change the limits of integration in the above to get the surface of the sphere ONLY in the 1st octant (where all three coordinates are positive)?</p></exercise>
+</exercises>
+</section>
+
+<section xml:id="section-Surfaces-Example">
+<title>Two Surface Area Examples (Parametric)</title>
+<p>Let's see two more complicated example computing our surface area parametrically.</p>
+<p>Learning Objectives:</p><ol marker="1">
+<li><p>Describe a parametrization for surfaces</p></li>
+<li><p>Compute the Surface Area given a parameterizations</p></li></ol>
+<p><alert>TYPO: </alert> <em> At about 5:42 I say and write "arclength" but am clearly doing "surface area" </em></p>
+<video youtube="wocoPCeggKE"></video>
+<exercises> 
+<exercise><p>The next video computes the following example: Find the surface area of the surface defined by <m>x^2+y^2=4</m> between <m>z=0</m> and <m>z=16-2x</m>. It is better to try this as an activity (the most important part is finding the parameterization) but you can verify your answer with the following video. </p></exercise>
+</exercises>
+
+<video youtube="C33aksf1NGU"></video>
+</section>
+
+<section xml:id="section-Surfaces-Implicit-Explicit">
+<title>Surface Area Formulas for Implicit and Explicit Descriptions</title>
+<p>We now turn to compute surface areas when the surface is described first implicitly and second explicitly. Turns out the explicit formula is just a quick extension of the implicit formula so up to you whether you want to learn the two formula by memory or just the implicit formula together with how to convert an explicit to implicit. </p>
+<p>Learning Objectives:</p><ol marker="1">
+<li><p>State the formula for Surface Area of an Implicitly or Explicitly define</p></li>
+<li><p>Determine the appropriate <m>\vec{p}</m> for a surface</p></li></ol>
+<video youtube="7rhBrj5I5Po"></video>
+<exercises> 
+<exercise><p>I skipped the formal derivation of the Implicit Surface Area formula. It's not bad practice: basically we come up with a generic parameterization and then use the parameterization surface area formula to get our implicit formula. The method is found <url href="https://media.pearsoncmg.com/cmg/pmmg_mml_shared/mathstats_html_ebooks/ThomasCalcET14e/page_1017.html">here in the Thomas Calculus textbook used in Math 204 at UVic</url>. I do want to note that while this method is mainly computational using techniques you know, the real magic that makes it work is called the Implicit Function Theorem which is extremely important and rather deep and perhaps the biggest single thing we gloss over in our rather non-rigorous treatment of vector calculus. </p></exercise>
+</exercises>
+</section>
+
+<section xml:id="section-Surfaces-Implicit-Example">
+<title>Surface Area Example (Implicit)</title>
+<p>And finally an example. We'll figure out which <m>\vec{p}</m> to use and then compute the surface area via the formula for implicit surfaces. </p>
+<p>Learning Objectives:</p><ol marker="1">
+<li><p>Compute the Surface Area of a surface described implicitly</p></li>
+<li><p>Reminder: How to convert an integral to polar</p></li></ol>
+<video youtube="H4KRSopBKdU"></video>
+<exercises> 
+<exercise><p>In the above I did it via the implicit formula because I want an example of that, but in this case we could just as well have (and even slightly easier) treat it as an explicit formula and do that instead. So try it that way now! </p></exercise>
+<exercise><p>You can also go back to <xref ref="section-Surfaces-Example">this previous example</xref> done parametrically previously and redo it with explicit or implicit formulas </p></exercise>
+</exercises>
+</section>
+</chapter>
+
+
+<chapter xml:id="chapter-Surface-Integrals">
+    <title>Surface Integrals</title>
+       <introduction>
+<p>Last class we have seen how to describe surfaces. Now we're going to talk about so called surface integrals over surfaces, just as we began our course talking about line integrals over curves. Similarly, just as we had a notion of the flux of a vector field across a curve, we will upgrade to the flux across a surface. </p></introduction>
+
+<section xml:id="section-Surface-Integrals">
+<title>Surface Integrals</title>
+<p>We now investigate Surface Integrals, integrating some function over a surface. Just as we had three ways to describe surfaces - parametrically, implicitly, and explicitly - we have three formulas for Surface Integrals. We will also look at a few examples: mass of a variable mass density surface, and average temperature. </p>
+<p>Learning Objectives:</p><ol marker="1">
+<li><p>State the Surface Integral formula for each of parametric, implicit and explicit</p></li>
+<li><p>Interpret applications like Mass and Average Temperature in terms of surface integrals</p></li></ol>
+
+<video youtube="6T9ZyUiYd60"></video>
+<exercises> 
+<exercise><p>Can you think of any other physical quantities that could be expressed using a surface integral?</p></exercise>
+</exercises>
+</section>
+
+<section xml:id="section-Surface-Orientable">
+<title>Orientable vs Non-orientable Surface</title>
+<p> love this video. Many surfaces - like a piece of paper or a cylinder - have two sides, right? But not all do! Some only have one, like the mobius band. In this video we talk about orientiable vs non-orientable surfaces. This is mainly going to be relevant later because our theorems will apply only to orientable surfaces.</p>
+<p>Learning Objectives:</p><ol marker="1">
+<li><p>Visually explain the difference between an orientable and nonorientable surface using normal vectors </p></li></ol>
+
+<video youtube="1FTd-1_5zf4"></video>
+<exercises> 
+<exercise><p>Here are two more non-orientable surface to play around with: the <url href="https://en.wikipedia.org/wiki/Klein_bottle">Klein bottle</url> and the <url href="https://en.wikipedia.org/wiki/Real_projective_plane">Real Projective Plane</url>. Cool, eh! (by the way, playing around with things like this becomes the subject called topology which is why my PhD is in and is awesome!)</p></exercise>
+</exercises>
+</section>
+
+<section xml:id="section-Surface-Flux">
+<title>Flux Across a Surface</title>
+<p> We've seen the Flux Across a Curve back in  <xref ref="section-Flux">Section</xref>. That was true for 2D vector fields. Now we upgrade to 3D vector fields and Flux Across a Surface. Before watching, can you guess how we will define this based on analogy with the 2D case?</p>
+<p>Learning Objectives:</p><ol marker="1">
+<li><p>Geometrically interpret the definition of Flux across a surface</p></li>
+
+<li><p>State formula to compute flux for parametric or implicit surface (as before, any explicit surface can be converted to an implicit one)</p></li>></ol>
+<p><alert>TYPOS: </alert> <em> At 5:57 I'm doing the implicit formula. I kept using the same dudv from parametric. But the differentials should be dA here where if the surface is living above the xy-plane, say, dA=dxdy. Secondly, it is conventional to convert from S (in the definition of flux) to R (in the computation) for flux where R is the region in, say, the xy-plane beneath the surface. Put together the corrected formula for Flux implicitly is</em> <m>\iint_R\vec{F}\cdot \frac{\nabla h}{\|\nabla g\cdot\vec{p}\|}dA</m></p>
+<video youtube="y_ZCZYMmkuk"></video>
+<exercises> 
+<exercise><p>This discussion of Flux across a surface is very closely related to the flux in the plane across a curve (right??). But in the plane we ALSO had a notion of circulation which is noticeably absent in this module. Why isn't there a direct parallel of circulation in the 3D case the way there is for flux? What is the geometric problem that prevents that?</p></exercise>
+</exercises>
+</section>
+
+<section xml:id="section-Surface-Ex2">
+<title>Example: Flux Across a Surface</title>
+<p> We've seen the Flux Across a Curve back in  <xref ref="section-Flux">Section</xref>. That was true for 2D vector fields. Now we upgrade to 3D vector fields and Flux Across a Surface. Before watching, can you guess how we will define this based on analogy with the 2D case?</p>
+<p>Learning Objectives:</p>
+<p>Compute the Flux across a surface via</p><ol marker="1">
+<li><p>Deciding to describe the surface parametrically or implicitly</p></li>
+<li><p>Computing out the components of the formula</p></li>
+<li><p>Evaluating the resulting double integral</p></li>></ol>
+<video youtube="qaGy9HZdpdw"></video>
+
+</section>
+</chapter>
+
+<chapter xml:id="chapter-Stokes">
+    <title>Stokes' Theorem</title>
+       <introduction>
+<p>I'm excited. In this section we are going to crack open Stokes' Theorem. We've seen its little sibling back in 2D, namely Green's Theorem Circulation Form, which related adding up the circulation density over a region with the circulation around its boundary. Today we have to come up with the appropriate 3D analogue of circulation density and see how we can put together the analogous theorem in 3D. Along with next class's Divergence theorem, these two theorems are really the highwater mark of a journey in Calculus that we started back with the Fundamental Theorem of Calculus in Calculus I. Finally, we see the full picture.  </p></introduction>
+
+<section xml:id="section-curl">
+<title>Curl of a Vector Field</title>
+<p>Back when <xref ref="section-Circulation-Density"> we first introduced Green's Theorem</xref>, we had a notion called circulation density.However, a little detail you might have missed is we also called this the "kth component of curl", without really expanding on what the full curl was. Now we see that. We are going to define the curl of a vector field and see what it means geometrically. We will also notice some nice properties that connected back to conservative vector fields. </p>
+<p>Learning Objectives:</p><ol marker="1">
+<li><p>Compute the curl of a vector field</p></li>
+<li><p>Interpret the curl geometrically</p></li>
+<li><p>Interpret the test for conservativeness of a field in terms of curl</p></li></ol>
+<p><alert>TYPO</alert>: <em> At 6:12 the kth component should be <m>f_{yx}-f_{xy}</m>.</em></p>
+<video youtube="IDKAfrc4NzU"></video>
+<exercises> 
+<exercise><p>Find the curl of <m>\vec{F}=(x^2-z)\hat{i}+xe^z\hat{j}+xy\hat{k}</m>. My preferred method uses determinants as opposed to memorizing the cumbersome formula. <url href="https://media.pearsoncmg.com/cmg/pmmg_mml_shared/mathstats_html_ebooks/ThomasCalcET14e/page_1033.html">Citation</url> </p>
+<answer><p><m>curl(\vec{F})=x(1-x^z)\hat{i}-(y+1)\hat{j}+e^z\hat{k}</m></p></answer>
+</exercise>
+</exercises>
+</section>
+
+<section xml:id="section-Stokes">
+<title>Stokes' Theorem</title>
+<p>In this video we finally state Stokes' Theorem in its fully glory and motivate the core geometric ideas behind it.</p>
+<p>Learning Objectives:</p><ol marker="1">
+<li><p>State Stokes' Theorem</p></li>
+<li><p>Geometrically interpret both sides of Stokes' Theorem</p></li></ol>
+<p>Pre-Video Activity: Before you watch, can you try and figure out the core ideas that will be in Stokes' Theorem?  I hinted earlier that Stokes' theorem is a generalization of Green's Theorem Circulation Form. But that was 2D. What would it even mean to have an analogous theorem in 3D?</p>
+<video youtube="s9Bo-F7bVeY"></video>
+<exercises> 
+<exercise><p>Now that we've watched the video, let's repeat the pre-video activity. In what ways can Stokes' Theorem be thought of as a generalization of Green's Theorem Circulation Form? Similarly, in what ways can Stokes' Theorem be thought of as an extension of the fundamental theorem of Calculus?</p></exercise>
+</exercises>
+</section>
+
+<section xml:id="section-Stokes-Example">
+<title>Stokes' Theorem Example</title>
+<p>Let's verify Stokes' Theorem by computing both side of the equation in a concrete example. </p>
+<p>Learning Objectives:</p><ol marker="1">
+<li><p>Compute both sides of Stokes' Theorem</p></li></ol>
+<video youtube="NnAA5r6Dhr0"></video>
+
+</section>
+
+</chapter>
+<chapter xml:id="chapter-Divergence">
+    <title>Divergence Theorem</title>
+       <introduction>
+<p>Today we finish our study of Vector Calculus, for now at least. But we are going out with a bang, generalizing the other half of Green's Theorem to something called the Divergence theorem which loosely says that integrating the divergence over a region is the same as the flux across the boundary of the region. We'll also get to see an important physics application as well as summarize everything we have done in a unified theory.   </p></introduction>
+
+<section xml:id="section-Divergence">
+<title>The Divergence Theorem</title>
+<p>When we first saw Green's Theorem back in section 16.4 there were two sides, a Circulation Form and a Divergence Form. Stokes' Theorem generalized the Circulation Form and today we will generalize the Divergence Form.  </p>
+<p>Learning Objectives:</p><ol marker="1">
+<li><p>State the Divergence Theorem</p></li>
+<li><p>Geometrically interpret both sides of the Divergence Theorem</p></li></ol>
+<p>Pre-Video Activity: Before you watch, can you try and figure out the core ideas that will be in the Divergence Theorem?  I've hinted it is a generalization of <xref ref="section-Greens-Divergence">Green's Theorem Divergence Form</xref>. But that was 2D. What would it even mean to have an analogous theorem in 3D?</p>
+
+<video youtube="N3nfNcD4UzY"></video>
+<exercises> 
+<exercise><p>Show that <m>div(curl \vec{F})=0</m>, analogous to a previous computation we have done that <m>curl(grad f)=0</m>. More generally, what are all the ways you can combine the div, curl, and grad operators so they make sense? Which of those are zero?</p></exercise>
+<exercise><p>Stokes' Theorem and the Divergence Theorem both generalize two sides of Green's Theorem which was about a region in the 2D plane with a boundary. However, they generalize in different ways. Stokes' theorem is still comparing a surface integral to a line integral along the boundary, it is just the surface lives in 3D not 2D. But for the Divergence theorem, we for the first time get a triple integral. Try to visualize what is going on here and why the generalization to 3D for Stokes' didn't give a triple integral but Divergence theorem did. </p></exercise>
+</exercises>
+</section>
+
+
+<section xml:id="section-Divergence-Example">
+<title>Divergence Theorem Example</title>
+<p>This video uses a cube as an example, which is great because doing six surface integrals (for the six sides) would be annoying but the divergence theorem makes it easy. </p>
+<p>Learning Objectives:</p><ol marker="1">
+<li><p>Compute Flux using the Divergence Theorem</p></li></ol>
+
+<video youtube="veI9-jO9VSE"></video>
+<exercises> 
+<exercise><p>A standard example is the outward Flux of <m>\vec{F}=x\hat{i}+y\hat{j}+z\hat{k}</m> across unit sphere of radius a centered at the origin. Compute this with the Divergence theorem.</p><answer><p><m>4\pi a^3</m></p></answer></exercise>
+<exercise><p>Ok, I said this one was easier to use the Divergence Theorem. But it is actually a reasonable exercise on computing the surface integrals directly. Yes there are six for the six sides but at least three are zero and you can use symmetry for the others. So verify you get the same answer directly as using Divergence Theorem. </p></exercise>
+</exercises>
+</section>
+
+<section xml:id="section-Divergence-Boundaries">
+<title>Regions with Two Boundaries</title>
+<p>The Divergence theorem enables a pretty nifty trick. Suppose the boundary of a 3D region has two disconnected components, like an inside surface and an outside surface. In this case when you apply the Divergence Theorem  it gives the sum of the two surface integrals, and fair warning we will have to be quite careful about signs here. This is going to be particularly useful when the Divergence is zero.  </p>
+<p>Learning Objectives:</p><ol marker="1">
+<li><p>Describe the Divergence Theorem when the region has a boundary consisting of two disconnected components.</p></li></ol>
+
+<video youtube="-U6AhxgaJgQ"></video>
+</section>
+
+<section xml:id="section-Gauss">
+<title>Gauss' Law</title>
+<p>This video is sort of optional. It's definitely not optional for anyone in physics/engineering or would ever see anything to do with electric fields because we are going to derive one of the foundational laws in Electricity and Magnetism. And it is good practice for everyone else. But I won't test the physics part of this.  </p>
+<p>Learning Objectives:</p><ol marker="1">
+<li><p>Derive Gauss's Law</p></li></ol>
+
+<video youtube="W_rQTYCGpnQ"></video>
+<exercises> 
+<exercise><p>Gauss's Law is one of the four Maxwell's equations. <url href="https://en.wikipedia.org/wiki/Maxwell%27s_equations">Take a look at the other three</url> and notice how they are all expressions in terms of line and surface integrals.</p></exercise>
+</exercises>
+</section>
+
+
+<section xml:id="section-Unified">
+<title>A Unified Perspective</title>
+<p>We've seen a lot of big theorems. Fundamental theorem of Calculus back in Calc 1. Fundamental Theorem of Line Integrals. Green's Theorem, both Circulation and Divergence Forms. Stokes' Theorem. Divergence Theorem. While each is different and has its own place, they are all based on the same unifying principles.  </p>
+<p>Learning Objectives:</p><ol marker="1">
+<li><p>Describe the connections between the major theorems of Vector Calculus</p></li></ol>
+
+<video youtube="-Wy8ZxX5U9M"></video>
+<exercises> 
+<exercise><p>When we first learned about differentiation and integration we saw how they were connected by the fundamental theorem of calculus. As we have rapidly expanded our understanding of the types of differentiation and the types of integration in more general contexts, there has remained a relationship between them. So super big picture, how would you describe the relationship between differentiation and integration?</p></exercise>
+</exercises>
+</section>
+
+
+</chapter>
+
+    </book>
+
+</pretext>
